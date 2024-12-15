@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS project1</title>
+    <style>
+        *{
+            background-color: rgb(5, 5, 5);
+        }
+        #content{
+            box-sizing: border-box;
+            width: 300px;
+            height: 850px;
+            border: 3px solid rgba(73, 6, 51, 0.719);
+            margin: 100px;
+            
+        }
+        input{
+            background-color: yellow;
+            border-radius: 60px;
+        }
+        input:hover{
+            background-color: blue;
+        }
+        button{
+            size: 40px;
+            border-radius: 60px;
+            justify-content: center;
+            background-color: coral;
+        }
+        button:hover{
+            background-color: brown;
+        }
+        h1{
+            color:rgb(252, 242, 242)
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+    <h1>ADDITION</h1>
+    <p>val 1 <input id="add1"></p>
+    <p>val 2 <input id="add2"></p>
+    <button onclick="add()">ADD</button>
+    <p id="addres">-----</p>
+    <h1>SUBSTRACTION</h1>
+    <p>val 1 <input id="sub1"></p>
+    <p>val 2 <input id="sub2"></p>
+    <button onclick="sub()">SUB</button>
+    <p id="subres">-----</p>
+    <h1>MULTIPLICATION</h1>
+    <p>val 1 <input id="mul1"></p>
+    <p>val 2 <input id="mul2"></p>
+    <button onclick="mul()">MUL</button>
+    <p id="mulres">-----</p>
+    <h1>DIVISION</h1>
+    <p>val 1 <input id="div1"></p>
+    <p>val 2 <input id="div2"></p>
+    <button onclick="div()">DIV</button>
+    <p id="divres">-----</p>
+</div>
+    <script>
+        function add()
+        {
+            var a=document.getElementById("add1");
+            var b=document.getElementById("add2");
+            var aresult=document.getElementById("addres");
+            var aa=Number(a.value);
+            var bb=Number(b.value);
+            var cc=aa+bb;
+            aresult.textContent=cc;
+        }
+        function sub()
+        {
+            var a=document.getElementById("sub1");
+            var b=document.getElementById("sub2");
+            var sresult=document.getElementById("subres");
+            var aa=Number(a.value);
+            var bb=Number(b.value);
+            var cc=aa-bb;
+            sresult.textContent=cc;
+        }
+        function mul()
+        {
+            var a=document.getElementById("mul1");
+            var b=document.getElementById("mul2");
+            var mresult=document.getElementById("mulres");
+            var aa=Number(a.value);
+            var bb=Number(b.value);
+            var cc=aa*bb;
+            mresult.textContent=cc;
+        }
+        function div()
+        {
+            var a=document.getElementById("div1");
+            var b=document.getElementById("div2");
+            var dresult=document.getElementById("divres");
+            var aa=parseInt(a.value);
+            var bb=parseInt(b.value);
+            var cc=aa/bb;
+            dresult.textContent=cc;
+        }
+    </script>
+</body>
+</html>
